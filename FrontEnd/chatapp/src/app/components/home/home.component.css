@@ -1,0 +1,31 @@
+ *{
+  top:10vh;
+  left:30vh;
+  bottom: 10vh;
+} 
+
+#formContainer .card{
+   left: 20%;
+   top: 20px;
+   width:80%;
+}
+
+h2,i{
+    color: purple;
+    left:50vh;
+}
+
+.btn{
+    border-radius: 100px;
+    margin:20px;
+    background-color:lightskyblue;
+}
+
+.card-header{
+    color: #1a725b;
+    font-size: larger;
+}
+
+.alert{
+    left:0 !important;
+}

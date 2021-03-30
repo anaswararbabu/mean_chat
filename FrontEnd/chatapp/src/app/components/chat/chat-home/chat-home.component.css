@@ -1,0 +1,27 @@
+
+h5{
+    color: red;
+}
+
+
+.add{
+    background-color: yellowgreen;
+    color: white;
+    padding: 3px;
+    margin-left: 15%;
+    cursor: pointer;  
+}
+
+td img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+}
+
+td {
+    text-align: center;
+    justify-content: center;
+}
+form{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,55 @@
+<main>
+    <div class="row">
+        <!-- BG Image -->
+      
+        <!-- Login Form -->
+        <div id="formContainer" class="col-lg-6">
+              <h2>Let's Chat!!! </h2>
+
+              <div class="card text-center shadow">
+                <div class="alert alert-danger text-center" *ngIf="errorMsg">
+                    {{errorMsg}}
+                </div>
+             <!-- <div class="card-header">
+               SIGN IN
+             </div> -->
+             <div class="card-body">
+            
+                 <!-- FORM BODY -->
+                 <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+            
+
+                    <div class="form-group">
+                     <label>Username</label>
+                     <input type="text" class="form-control" name="username"  required [(ngModel)]=User.username
+                     #username="ngModel" [class.is-invalid]="username.invalid && username.touched">
+                 </div>
+                     <div *ngIf="username.errors && (username.invalid || username.touched)">
+                        <small class="text-danger" *ngIf="username.errors.required" [class.d-none]="username.valid || username.untouched">Username cannot be empty</small>
+                     </div><br>
+            
+                 <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" class="form-control" name="password" required [(ngModel)]=User.password
+                     #password="ngModel" [class.is-invalid]="password.invalid && password.touched" pattern="^[\w\S]{8,16}$">
+                 </div>
+                 <div *ngIf="password.errors && (password.invalid || password.touched)">
+                     <small class="text-danger" *ngIf="password.errors.required" [class.d-none]="password.valid || password.untouched">Password cannot be empty</small>
+                     <small class="text-danger" *ngIf="password.errors.pattern" [class.d-none]="password.valid || password.untouched">Password must be minimum 8 characters</small>
+                  </div>
+                  <button [disabled]="userForm.form.invalid" type="submit" class="btn btn-lg btn-success" >Log In</button>
+                
+            <!-- /Form Body -->
+              </form>
+              </div>
+              <h4>New User Here? Sign up <a routerLink="/userRegister">here</a></h4>
+              
+              
+              </div>
+            
+              
+        </div>
+
+    </div>
+
+</main>

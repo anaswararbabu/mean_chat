@@ -1,0 +1,30 @@
+
+*{
+    top:10vh;
+    left:90vh;
+    bottom: 10vh;
+  }
+  #formContainer .card{
+     left: 0;
+     top: 20px;
+     width:80%;
+  }
+  
+  h2,i{
+      color:purple;
+  }
+  
+  .btn{
+      border-radius: 100px;
+      margin:20px;
+      background-color: lightskyblue;
+  }
+  
+  .card-header{
+      color: skyblue;
+      font-size: larger;
+  }
+
+  .alert{
+      left:0 !important;
+  }
